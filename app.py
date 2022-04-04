@@ -16,5 +16,5 @@ if date_number >= 3:
     for i in range(date_number - 1, (date_number - 3), -1):
         rain_amount += data["dataserie"][i]["valueRounded2OneDecimal"]
 
-if rain_amount < 1.0:
+if rain_amount > 1.0:
     print("Perhaps you should water the garden ..")
