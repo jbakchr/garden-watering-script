@@ -22,10 +22,12 @@ if date_number >= 3:
 if rain_amount > 1.0:
     root = tk.Tk()
 
-    ttk.Label(root, text="Perhaps you should water the garden",
-              padding=(20, 20)).pack()
+    label = ttk.Label(root, text="Perhaps you should water the garden ..",
+                      padding=(20, 20))
+    label.pack()
 
-    ok_button = ttk.Button(root, text="OK", command=root.destroy)
+    ok_button = ttk.Button(
+        root, text="OK", command=root.destroy, padding=(10, 10))
     ok_button.pack()
 
     root.mainloop()
