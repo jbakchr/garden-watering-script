@@ -4,7 +4,6 @@ import tkinter as tk
 from tkinter import ttk
 
 import requests
-import pyautogui
 
 city = requests.utils.quote("Hillerød")
 year = datetime.now().strftime("%Y")
@@ -30,5 +29,3 @@ if rain_amount > 1.0:
     ok_button.pack()
 
     root.mainloop()
-    # pyautogui.confirm(text="Perhaps you should water to garden ..",
-    #   title="Awesome Garden Watering App", buttons=['OK'])
