@@ -1,6 +1,8 @@
 from datetime import datetime
-import requests
 import json
+from turtle import title
+import requests
+import pyautogui
 
 city = requests.utils.quote("Hillerød")
 year = datetime.now().strftime("%Y")
@@ -17,4 +19,5 @@ if date_number >= 3:
         rain_amount += data["dataserie"][i]["valueRounded2OneDecimal"]
 
 if rain_amount < 1.0:
-    print("Perhaps you should water the garden ..")
+    pyautogui.confirm(text="Perhaps you should water to garden ..",
+                      title="Awesome Garden Watering App", buttons=['OK'])
