@@ -1,6 +1,5 @@
 from datetime import datetime
 import json
-from turtle import title
 import requests
 import pyautogui
 
